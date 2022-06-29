@@ -112,16 +112,15 @@ const SideBar = ({ children }) => {
             <div className="main-container">
                 <motion.div
                     animate={{
-                        width: isOpen ? "200px" : "45px",
+                        width: isOpen ? "350px" : "60px",
 
                         transition: {
-                            duration: 0.5,
+                            duration: 1,
                             type: "spring",
                             damping: 10,
                         },
-                    }}
-                    className={`sidebar `}
-                >
+                    }} className={`sidebar`}>
+
                     <div className="top_section">
                         <AnimatePresence>
                             {isOpen && (
@@ -130,9 +129,8 @@ const SideBar = ({ children }) => {
                                     initial="hidden"
                                     animate="show"
                                     exit="hidden"
-                                    className="logo"
-                                >
-                                    DoSomeCoding
+                                    className="logo">
+                                    Energy System
                                 </motion.h1>
                             )}
                         </AnimatePresence>
@@ -140,23 +138,6 @@ const SideBar = ({ children }) => {
                         <div className="bars">
                             <FaBars onClick={toggle} />
                         </div>
-                    </div>
-                    <div className="search">
-                        <div className="search_icon">
-                            <BiSearch />
-                        </div>
-                        <AnimatePresence>
-                            {isOpen && (
-                                <motion.input
-                                    initial="hidden"
-                                    animate="show"
-                                    exit="hidden"
-                                    variants={inputAnimation}
-                                    type="text"
-                                    placeholder="Search"
-                                />
-                            )}
-                        </AnimatePresence>
                     </div>
                     <section className="routes">
                         {routes.map((route, index) => {
@@ -186,8 +167,7 @@ const SideBar = ({ children }) => {
                                                 initial="hidden"
                                                 animate="show"
                                                 exit="hidden"
-                                                className="link_text"
-                                            >
+                                                className="link_text">
                                                 {route.name}
                                             </motion.div>
                                         )}
