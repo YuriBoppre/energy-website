@@ -8,12 +8,15 @@ const CadDadosGerais = () => {
 
     return (
         <>
-            <div className="title">CadDadosGerais</div>
+            <div className="title">Dados gerais</div>
 
-            <label>Consumo total de energia anual</label>
-            <input type="text" onChange={event => setConsumoTotaldeEnergiaAnual(event.target.value)}/>
-
-            <Salvar />
+            <div className="container">
+                <div>
+                    <label>Consumo total de energia anual</label>
+                    <input type="text" onChange={event => setConsumoTotaldeEnergiaAnual(event.target.value)} placeholder="0,00 KWh/ano" />
+                </div>
+                <Salvar />
+            </div>
         </>
     )
 }

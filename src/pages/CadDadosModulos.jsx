@@ -6,11 +6,20 @@ const CadDadosModulos = () => {
 
   return (
     <>
-      <div className="title">CadDadosModulos</div>
-      <div className="container">
-        <input type="text" onChange={event => setPotenciaMaximaModulo(event.target.value)}/>
-        <input type="text" onChange={event => tensaoModuloCircuitoAberto(event.target.value)}/>
-        <input type="text" onChange={event => correnteCurtoCircuito(event.target.value)}/>
+      <div className="title">Dados dos módulos</div>
+      <div className="containerDadosModulos">
+        <div>
+          <label htmlFor="">Potência máxima</label>
+          <input type="text" placeholder="0,00 Pmp (W)" onChange={event => setPotenciaMaximaModulo(event.target.value)} />
+        </div>
+        <div>
+          <label htmlFor="">Tensão em circuito aberto</label>
+          <input type="text" placeholder="0,00 Voc (V)"  onChange={event => tensaoModuloCircuitoAberto(event.target.value)}/>
+        </div>
+        <div>
+          <label htmlFor="">Corrente de curto-circuito</label>
+          <input type="text" placeholder="0,00 Ish (A)" onChange={event => correnteCurtoCircuito(event.target.value)}/>
+        </div>
       </div>
     </>
   )

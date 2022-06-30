@@ -5,7 +5,7 @@ import { createContext, useState } from "react";
 import CadDadosGerais from "./pages/CadDadosGerais";
 import CadDadosModulos from "./pages/CadDadosModulos";
 import CadDadosInversor from "./pages/CadDadosInversor";
-import CadDadosBasicos from "./pages/CadDadosBasicos";
+import CadDadosArranjos from "./pages/CadDadosArranjos";
 import ConsultaRelatorios from "./pages/ConsultaRelatorios";
 import Sidebar from "./components/Sidebar";
 
@@ -65,7 +65,7 @@ function App() {
             <Route path="/" element={<CadDadosGerais />} />
             <Route path="/cadDadosModulos" element={<CadDadosModulos />} />
             <Route path="/cadDadosInversor" element={<CadDadosInversor />} />
-            <Route path="/cadDadosBasicos" element={<CadDadosBasicos />} />
+            <Route path="/cadDadosArranjos" element={<CadDadosArranjos />} />
             <Route path="/consultaRelatorios" element={<ConsultaRelatorios />} />
             <Route path="*" element={<> not found</>} />
           </Routes>
