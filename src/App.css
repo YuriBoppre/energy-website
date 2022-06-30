@@ -75,8 +75,8 @@ main {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 0px 40px 0px 40px;
+  gap: 1rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 .link {
@@ -89,16 +89,19 @@ main {
   text-decoration: none;
   border-radius: 10px;
 }
+
 .link:hover {
   border-right: 4px solid white;
   background: #EBF7FD;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
+
 .active {
   border-right: 4px solid white;
   background: #EBF7FD;
   color: #36AAEC;
 }
+
 .link_text {
   white-space: nowrap;
   font-size: 15px;
@@ -107,8 +110,7 @@ main {
 
 .menu {
   display: flex;
-  color: white;
-
+  color: #8D8EB8;;
   padding: 5px 10px;
   border-right: 4px solid transparent;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);

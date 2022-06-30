@@ -1,94 +1,44 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-import { BiAnalyse, BiSearch } from "react-icons/bi";
-import { BiCog } from "react-icons/bi";
-import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
-import { BsCartCheck } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
+import { BiRadioCircle } from "react-icons/bi";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { TbFileReport } from "react-icons/tb";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 
 const routes = [{
-    path: "/",
-    name: "Dashboard",
-    icon: <FaHome />,
-}, {
-    path: "/users",
-    name: "Users",
-    icon: <FaUser />,
-}, {
-    path: "/messages",
-    name: "Messages",
-    icon: <MdMessage />,
-}, {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BiAnalyse />,
-}, {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation />,
-    subRoutes: [{
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
-    }, {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
-    }, {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-    }],
-}, {
-    path: "/order",
-    name: "Order",
-    icon: <BsCartCheck />,
-}, {
     path: "/settings",
-    name: "Settings",
-    icon: <BiCog />,
+    name: "Cadastros",
+    icon: <AiOutlinePlusCircle />,
     exact: true,
     subRoutes: [{
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
+        path: "/",
+        name: "Geral",
+        icon: <BiRadioCircle />,
     }, {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
+        path: "/cadDadosModulos",
+        name: "Módulo",
+        icon: <BiRadioCircle />,
     }, {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
+        path: "/cadDadosInversor",
+        name: "Inversor",
+        icon: <BiRadioCircle />,
+    }, {
+        path: "/cadDadosBasicos",
+        name: "MPPTs",
+        icon: <BiRadioCircle />,
     }],
 }, {
-    path: "/saved",
-    name: "Saved",
-    icon: <AiFillHeart />,
+    path: "/consultaRelatorios",
+    name: "Relatórios",
+    icon: <TbFileReport />,
 }];
+
 
 const SideBar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-    const inputAnimation = {
-        hidden: {
-            width: 0,
-            padding: 0,
-            transition: {
-                duration: 0.2,
-            },
-        },
-        show: {
-            width: "140px",
-            padding: "5px 15px",
-            transition: {
-                duration: 0.2,
-            },
-        },
-    };
 
     const showAnimation = {
         hidden: {
@@ -112,7 +62,7 @@ const SideBar = ({ children }) => {
             <div className="main-container">
                 <motion.div
                     animate={{
-                        width: isOpen ? "350px" : "60px",
+                        width: isOpen ? "22rem" : "5rem",
 
                         transition: {
                             duration: 1,
