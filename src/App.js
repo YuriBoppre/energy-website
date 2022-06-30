@@ -13,12 +13,51 @@ export const Contexto = createContext({});
 
 function App() {
   const [consumoTotalDeEnergiaAnual, setConsumoTotaldeEnergiaAnual] = useState(0);
+  
+  const [potenciaMaximaModulo, setPotenciaMaximaModulo] = useState(0);
+  const [tensaoModuloCircuitoAberto, setTensaoModuloCircuitoAberto] = useState(0);
+  const [correnteCurtoCircuito, setCorrenteCurtoCircuito] = useState(0);
+  
+  const [potenciaMaximaCaInversor, setPotenciaMaximaCaInversor] = useState(0);
+  const [tensaoMaximaMppt, setTensaoMaximaMppt] = useState(0);
+  const [tensaoMinimaMppt, setTensaoMinimaMppt] = useState(0);
+  const [correnteMaximaMppt, setCorrenteMaximaMppt] = useState(0);
+  const [numeroMppts, setNumeroMppts] = useState(0);
+  const [quantidadeInversoresFrequencia, setQuantidadeInversoresFrequencia] = useState(0);
+  
   const [dados, setDados] = useState();
 
   return (
     <Contexto.Provider value={{
       consumoTotalDeEnergiaAnual,
-      setConsumoTotaldeEnergiaAnual
+      setConsumoTotaldeEnergiaAnual,
+
+      potenciaMaximaModulo,
+      setPotenciaMaximaModulo,
+
+      tensaoModuloCircuitoAberto,
+      setTensaoModuloCircuitoAberto,
+
+      correnteCurtoCircuito,
+      setCorrenteCurtoCircuito,
+
+      potenciaMaximaCaInversor,
+      setPotenciaMaximaCaInversor,
+
+      tensaoMaximaMppt,
+      setTensaoMaximaMppt,
+
+      tensaoMinimaMppt,
+      setTensaoMinimaMppt,
+
+      correnteMaximaMppt,
+      setCorrenteMaximaMppt,
+
+      numeroMppts,
+      setNumeroMppts,
+
+      quantidadeInversoresFrequencia,
+      setQuantidadeInversoresFrequencia
     }}>
       <Router>
         <Sidebar>

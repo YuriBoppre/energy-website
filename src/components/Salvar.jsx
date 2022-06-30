@@ -3,7 +3,28 @@ import { useContext } from 'react'
 import { Contexto } from '../App.js';
 
 const Salvar = () => {
-    const { setDados, consumoTotalDeEnergiaAnual } = useContext(Contexto);
+    const { 
+        setDados, 
+        consumoTotalDeEnergiaAnual,
+  
+        potenciaMaximaModulo,
+  
+        tensaoModuloCircuitoAberto,
+  
+        correnteCurtoCircuito,
+  
+        potenciaMaximaCaInversor,
+  
+        tensaoMaximaMppt,
+  
+        tensaoMinimaMppt,
+  
+        correnteMaximaMppt,
+  
+        numeroMppts,
+  
+        quantidadeInversoresFrequencia,
+    } = useContext(Contexto);
 
     const onSubmit = () => {
         api.post("http://localhost:8080/salvar", {
@@ -11,17 +32,17 @@ const Salvar = () => {
                 consumo_total_energia_anual: consumoTotalDeEnergiaAnual
             },
             DadosModulos: {
-                potencia_maxima_modulo: 0,       
-                tensao_modulo_circuito_aberto: 0, 
-                corrente_curto_circuito: 0,       
+                potencia_maxima_modulo: potenciaMaximaModulo,       
+                tensao_modulo_circuito_aberto: tensaoModuloCircuitoAberto, 
+                corrente_curto_circuito: correnteCurtoCircuito,       
             },
             DadosInversor: {
-                potencia_maxima_ca_inversor: 0,
-                tensao_maxima_mppt: 0,
-                tensao_minima_mppt: 0,
-                corrente_maxima_mppt: 0,
-                numero_mppts: 0,
-                quantidade_inversores_frequencia: 0,
+                potencia_maxima_ca_inversor: potenciaMaximaCaInversor,
+                tensao_maxima_mppt: tensaoMaximaMppt,
+                tensao_minima_mppt: tensaoMinimaMppt,
+                corrente_maxima_mppt: correnteMaximaMppt,
+                numero_mppts: numeroMppts,
+                quantidade_inversores_frequencia: quantidadeInversoresFrequencia,
             },
             DadosArranjo: {
                 numero_total_modulos: 0,
