@@ -128,3 +128,17 @@ main {
   padding-left: 20px;
   border-bottom: #fff 0.5px solid;
 }
+
+
+
+
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
