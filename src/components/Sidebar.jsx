@@ -25,7 +25,7 @@ const routes = [{
         name: "Inversor",
         icon: <BiRadioCircle />,
     }, {
-        path: "/cadDadosBasicos",
+        path: "/cadDadosArranjos",
         name: "MPPTs",
         icon: <BiRadioCircle />,
     }],
