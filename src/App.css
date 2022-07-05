@@ -219,6 +219,26 @@ label {
   font-weight: 600;
 }
 
+.tituloRel{
+  font-family: 'Calibri';
+  padding: 0px 0px 5px 0px;
+  color: #414389;
+  font-weight: 600;
+}
+
+.containerRel {
+  background: white;
+  padding: 10px;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 5px 0px rgba(199,199,199,0.75);
+}
+
+.containerRel b {
+  font-family: 'Calibri';
+  color: #8D8EB8;
+  font-weight: 600;
+}
+
 
 .containerModulos {
   display: grid;

@@ -24,6 +24,10 @@ const Salvar = () => {
         numeroMppts,
   
         quantidadeInversoresFrequencia,
+
+        numeroTotalModulos,
+
+        mppts
     } = useContext(Contexto);
 
     const onSubmit = () => {
@@ -45,31 +49,31 @@ const Salvar = () => {
                 quantidade_inversores_frequencia: quantidadeInversoresFrequencia,
             },
             DadosArranjo: {
-                numero_total_modulos: 0,
+                numero_total_modulos: numeroTotalModulos,
                 mppts: [
                     {
-                        numero_strings: 0,
-                        modulos_string: 0,
-                        azimute: 0,
-                        inclinacao: 0,
+                        numero_strings: mppts[0].numero_strings,
+                        modulos_string: mppts[0].modulos_string,
+                        azimute: mppts[0].azimute,
+                        inclinacao: mppts[0].inclinacao,
                     },
                     {
-                        numero_strings: 0,
-                        modulos_string: 0,
-                        azimute: 0,
-                        inclinacao: 0,
+                        numero_strings: mppts[1].numero_strings,
+                        modulos_string: mppts[1].modulos_string,
+                        azimute: mppts[1].azimute,
+                        inclinacao: mppts[1].inclinacao,
                     },
                     {
-                        numero_strings: 0,
-                        modulos_string: 0,
-                        azimute: 0,
-                        inclinacao: 0,
+                        numero_strings: mppts[2].numero_strings,
+                        modulos_string: mppts[2].modulos_string,
+                        azimute: mppts[2].azimute,
+                        inclinacao: mppts[2].inclinacao,
                     },
                     {
-                        numero_strings: 0,
-                        modulos_string: 0,
-                        azimute: 0,
-                        inclinacao: 0,
+                        numero_strings: mppts[3].numero_strings,
+                        modulos_string: mppts[3].modulos_string,
+                        azimute: mppts[3].azimute,
+                        inclinacao: mppts[3].inclinacao,
                     },
                 ]
             }

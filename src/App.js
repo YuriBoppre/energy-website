@@ -24,6 +24,9 @@ function App() {
   const [correnteMaximaMppt, setCorrenteMaximaMppt] = useState(0);
   const [numeroMppts, setNumeroMppts] = useState(0);
   const [quantidadeInversoresFrequencia, setQuantidadeInversoresFrequencia] = useState(0);
+
+  const [numeroTotalModulos, setNumeroTotalModulos] = useState(0);
+  const [mppts, setMppts] = useState([]);
   
   const [dados, setDados] = useState();
 
@@ -57,7 +60,13 @@ function App() {
       setNumeroMppts,
 
       quantidadeInversoresFrequencia,
-      setQuantidadeInversoresFrequencia
+      setQuantidadeInversoresFrequencia,
+
+      numeroTotalModulos,
+      setNumeroTotalModulos,
+
+      setMppts,
+      mppts
     }}>
       <Router>
         <Sidebar>

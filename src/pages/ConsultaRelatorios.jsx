@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import { api } from '../utils/api.js';
 
 const ConsultaRelatorios = () => {
-    const [dados, setDados] = useState({});
+    const [dados, setDados] = useState();
 
     useEffect(() => {
         api.get('/relatorio')
@@ -14,26 +14,25 @@ const ConsultaRelatorios = () => {
     return (
         <>
             <div className="title">ConsultaRelatorios</div>
-            
-            <div>Geração energia fotovotaica</div>
-            <br />
-            <div>mínimo: {dados.geracaoFotovotaica.minimoGeracaoEnergia}</div>
-            <br />
-            <div>presente: {dados.geracaoFotovotaica.presenteGeracaoEnergia}</div>
-            <br />
-            <div>máximo: {dados.geracaoFotovotaica.maximoGeracaoEnergia}</div>
-            <br />
-            <br />
+            {
+                dados != null ? (
+                    <>
+                    <div className="container containerRel">
+                    <div className="tituloRel">Geração energia fotovotaica</div>
+                    <div><b>mínimo:</b> {dados.geracaoFotovotaica.minimoGeracaoEnergia}</div>
+                    <div><b>presente:</b> {dados.geracaoFotovotaica.presenteGeracaoEnergia}</div>
+                    <div><b>máximo:</b> {dados.geracaoFotovotaica.maximoGeracaoEnergia}</div>
+        
+                    <div className="tituloRel">Potência do inversor</div>
+                    <div><b>mínimo:</b> {dados.potenciaInversor.minimoPotenciaInversor}</div>
+                    <div><b>presente:</b> {dados.potenciaInversor.presentePotenciaInversor}</div>
+                    <div><b>máximo:</b> {dados.potenciaInversor.maximoPotenciaInversor}</div>
+                    </div>
+                    </>
+                ) : null
 
-            <div>Potencia do inversor</div>
-            <br />
-            <div>mínimo: {dados.potenciaInversor.minimaPotenciaInversor}</div>
-            <br />
-            <div>presente: {dados.geracaoFotovotaica.presentePotenciaInversor}</div>
-            <br />
-            <div>máximo: {dados.geracaoFotovotaica.maximoPotenciaInversor}</div>
+            }
 
-            <div></div>
         </>
     )
 }
